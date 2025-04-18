@@ -1,0 +1,18 @@
+global:
+  resolve_timeout: 5m
+
+route:
+  group_by: ['alertname']
+  group_wait: 30s
+  group_interval: 5m
+  repeat_interval: 1h
+  receiver: 'wechat'
+
+receivers:
+- name: 'wechat'
+  wechat_configs:
+  - send_resolved: true
+    corp_id: 'YOUR_CORP_ID'    # 替换为您的企业微信ID
+    to_user: '@all'
+    agent_id: 'YOUR_AGENT_ID'  # 替换为您的应用AgentID
+    api_secret: 'YOUR_SECRET'  # 替换为您的应用Secret

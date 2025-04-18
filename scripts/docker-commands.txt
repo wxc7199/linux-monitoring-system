@@ -1,0 +1,4 @@
+NAMES          COMMAND                  PORTS
+alertmanager   "/bin/alertmanager -…"   0.0.0.0:9093->9093/tcp, :::9093->9093/tcp
+grafana        "/run.sh"                0.0.0.0:3000->3000/tcp, :::3000->3000/tcp
+prometheus     "/bin/prometheus --c…"   0.0.0.0:9090->9090/tcp, :::9090->9090/tcp
